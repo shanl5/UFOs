@@ -1,0 +1,14 @@
+body {
+    
+    color: #f7f7f7;
+}
+/* :apply only to divs with a class of "jumbotron": */
+/* .specify background image, telling code where stored */
+/* .size of background set to span entire width and height of element, */
+/*  "no matter the size of the viewport" */
+/* .align text to be in center of element */
+.jumbotron {
+    background-image: url("../images/nasa.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
