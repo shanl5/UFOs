@@ -93,5 +93,15 @@
             </div>
         </div>
     </div>
+    <!-- Add scripts following order as necessary: -->
+    <!-- 1) link to a D3.js CDN; 2) file path to data.js; 3) file path to app.js -->
+    <!-- D3.js link "allows the library to 'listen' in on code, or react to input -->
+    <!--  e.g. without link, `d3.select` code section in `app.js` wouldn't know -->
+    <!--  where to insert data" -->
+    <!-- `data.js` next, since "the UFO sightings data needs to be loaded before -->
+    <!--  it can be accessed" as is done in the `app.js` script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>"
 </body>
 </html>
