@@ -43,4 +43,45 @@ function buildTable(data) {
             }
         );
     });
-}
+};
+
+// "Handle" what to do after input is given,
+// e.g. filter table by date
+function handleClick() {
+    // select first element matching selector string "#datetime"
+    // (#datetime is id of datetime in HTML tags)
+    // chain .property("value") to "grab the information
+    // and hold it in the 'date' variable.
+    //_'Grab the datetime value from the filter'
+    let date = d3.select("#datetime").property("value");
+
+    // set default filter and save to a new variable
+    let filteredData = tableData;
+
+    // check for date; if present, return only data with that date
+    // (note the use of strict matching '===' for type and value)
+    //_'Check to see if a date was entered and filter the data
+    //__using that date.'
+    if (date) {
+        filteredData = filteredData.filter( row => row.datetime === date );
+    };
+
+    //_'Rebuild the table using the filtered data
+    //__@NOTE: If no date was entered, then filteredData will
+    //__just be the original tableData.'
+    buildTable(filteredData);
+};
+
+// Many event actions can be listened for and handled
+// with D3.js > :tooltip can display when mouse-over a
+// specific element on a webpage; :keyboard, forms, text
+// composition events (some quite advanced) also
+
+// "Listen" for the click to be handled
+// ("tell" D3 to execute the `handleClick()` function
+// when button with an id of `filter-btn` is clicked)
+//_'Attach an event to listen for the form button'
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+//_'Build the table when the page loads'
+buildTable(tableData);
