@@ -40,8 +40,8 @@ While the page is well-designed and has several features added, particularly for
 - Case Sensitivity<br>
     - As noted in Results item (4) above, the input is case-sensitive, as well as requiring an exact match for the input box to the table data. Thus, neither partial matches nor range-matching is available in the current implementation of the webpage.
         - Any of these features could be recommended to be made available as a future improvement.<br><br>
-< Country Code `ca` for Canada >      :      < city of `london` in Canada no match >      :      < needs `london (canada)` to be specified >
-<img src="Resources/images/Canada_is_country_code_ca.png" width="31%">.<img src="Resources/images/No_partial_inputs.png" width="31%">.<img src="Resources/images/must_match_full_field_spelled_out.png" width="31%">
+< Country Code `ca` for Canada >   :   < city of `london` in Canada no match >   :   < needs `london (canada)` to be specified >
+<img src="Resources/images/Canada_is_country_code_ca.png" width="30%">.<img src="Resources/images/No_partial_inputs.png" width="30%">.<img src="Resources/images/must_match_full_field_spelled_out.png" width="30%">
 ---
 
 #### Project Tools
